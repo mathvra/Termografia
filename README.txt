@@ -1,0 +1,1 @@
+Olá, esse é o nosso projeto de termografia! Estamos só começando!
