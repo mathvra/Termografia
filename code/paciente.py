@@ -11,10 +11,10 @@ class Paciente():
 	def getNome(self):
 		return self.__nome
 
-	def setId(self):
+	def setIDent(self):
 		self.__ident = ident
 
-	def getID(self):
+	def getIDent(self):
 		return self.__ident
 
 	def setImg(self):
