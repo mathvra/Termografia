@@ -10,43 +10,44 @@ preto=0
 branco=0
 
 total=0
-imagemCarregada = cv2.imread("lego.jpg", 1)
+imagemCarregada = cv2.imread("azul.jpg", 1)
 for y in range(0, imagemCarregada.shape[0],1):
     for x in range(0, imagemCarregada.shape[1],1):
         (b, g, r) = imagemCarregada[y, x]
         posicao=imagemCarregada[y, x]
 
         #VERMELHO
-        if ((b>=0 and b<=124) and (g>=0 and g<=124) and r==255):
+
+
+        if ((b==0 and g==0 and (r>=45 and r<=255)) or ((b>=0 and b<=124) and (g>=0 and g<=124) and r==255)):
             vermelho=vermelho+1
 
         #AMARELO
-        if (b==0 and (g>=125 and g<=255) and (r>=124 and r<=255)):
-            amarelo = amarelo + 1
+        elif (b==0 and (g>=125 and g<=255) and (r>=124 and r<=255)):
+                amarelo = amarelo + 1
 
         #VERDE
-        if ((b>=0 and b<=124) and g==255 and (r>=0 and r<=125)):
+        elif (b==0 and r==0 and (g>=45 and g<=255)) or ((b>=0 and b<=124) and g==255 and (r>=0 and r<=125)):
             verde=verde+1
 
         #CIANO
-        if ((b>=125 and b<=255) and (g>=124 and g<=255) and r==0):
+        elif ((b>=125 and b<=255) and (g>=124 and g<=255) and r==0):
             ciano=ciano+1
 
         #AZUL
-        if (b==255 and (g>=0 and g<=125) and (r>=0 and r<=124)):
+        elif (r==0 and g==0 and (b>=45 and b<=255)) or (b==255 and (g>=0 and g<=125) and (r>=0 and r<=124)):
             azul=azul+1
 
         #MAGENTA
-        if ((b>=124 and b<=255) and g==0 and (r>=125 and r<=255)):
+        elif ((b>=124 and b<=255) and g==0 and (r>=125 and r<=255)):
             magenta=magenta+1
 
         #PRETO
-        if (b==0 and g==0 and r==0):
+        elif (((b>=0 and b<=44) and (g>=0 and g<=44) and (r>=0 and r<=44)) or (b==0 and g==0 and r==0)):
             preto=preto+1
 
         #BRANCO
-        if (b==255 and g==255 and r==255):
-           branco=branco+1
+        branco = (imagemCarregada.shape[1] * imagemCarregada.shape[0]) - (preto + magenta + azul + ciano + verde + amarelo + vermelho)
 
 #PORCETAGEM:
 total = (imagemCarregada.shape[1] * imagemCarregada.shape[0])/100
@@ -71,7 +72,8 @@ print('PORCENTAGENS:\n\n'
       'Magenta: {:.2f}%\n'
       'Preto: {:.2f}%\n'
       'Branco: {:.2f}%'.format(vermelhoP, amareloP, verdeP, cianoP, azulP, magentaP, pretoP, brancoP))
+print("Total {}" .format(imagemCarregada.shape[1] * imagemCarregada.shape[0]))
+print("Canais: {}".format(imagemCarregada.shape[2]))
 cv2.waitKey(0)
-
 
 cv2.destroyAllWindows()
