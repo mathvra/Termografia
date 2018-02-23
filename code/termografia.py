@@ -10,18 +10,16 @@ preto=0
 branco=0
 
 total=0
-imagemCarregada = cv2.imread("azul.jpg", 1)
+imagemCarregada = cv2.imread('vermelho1.png', 1)
 for y in range(0, imagemCarregada.shape[0],1):
     for x in range(0, imagemCarregada.shape[1],1):
         (b, g, r) = imagemCarregada[y, x]
         posicao=imagemCarregada[y, x]
 
         #VERMELHO
-
-
-        if ((b==0 and g==0 and (r>=45 and r<=255)) or ((b>=0 and b<=124) and (g>=0 and g<=124) and r==255)):
+        if ((b==0 and g==0 and (r>=45 and r<=255)) or((b>=0 and b<=124) and (g>=0 and g<=124) and r==255)):
             vermelho=vermelho+1
-
+'''
         #AMARELO
         elif (b==0 and (g>=125 and g<=255) and (r>=124 and r<=255)):
                 amarelo = amarelo + 1
@@ -59,10 +57,12 @@ azulP=azul/total
 magentaP=magenta/total
 pretoP=preto/total
 brancoP=branco/total
-
+'''
 
 cv2.imshow("Imagem modificada", imagemCarregada)
 print("Vermelho: {}\nAmarelo: {}\nVerde: {}\nCiano: {}\nAzul: {}\nMagenta: {}\nPreto: {}\nBranco: {}".format(vermelho, amarelo, verde, ciano, azul, magenta, preto, branco))
+
+'''
 print('PORCENTAGENS:\n\n'
       'Vermelho: {:.2f}%\n'
       'Amarelo: {:.2f}%\n'
@@ -72,8 +72,10 @@ print('PORCENTAGENS:\n\n'
       'Magenta: {:.2f}%\n'
       'Preto: {:.2f}%\n'
       'Branco: {:.2f}%'.format(vermelhoP, amareloP, verdeP, cianoP, azulP, magentaP, pretoP, brancoP))
+'''
 print("Total {}" .format(imagemCarregada.shape[1] * imagemCarregada.shape[0]))
 print("Canais: {}".format(imagemCarregada.shape[2]))
+
 cv2.waitKey(0)
 
 cv2.destroyAllWindows()
