@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-imagem = cv2.imread('teste2.jpeg', 1)
+imagem = cv2.imread('lego.jpg', 1)
 imagemHSV = cv2.cvtColor(imagem, cv2.COLOR_BGR2HSV)
 total = imagem.shape[1] * imagem.shape[0]
 
