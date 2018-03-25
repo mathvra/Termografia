@@ -1,6 +1,6 @@
 Olá, esse é o nosso projeto de termografia! Estamos só começando!
 
-Requisistos | Termografisio
+Requisistos | TermoCrivo
 
 O sistema deve cadastrar paciente
 O sistema deve importar imagem

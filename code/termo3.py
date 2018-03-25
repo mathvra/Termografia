@@ -25,9 +25,8 @@ def vermelho(total):
                 preto = preto + 1
 
     vermelho = total - preto
-    print('Vermelho: ', vermelho)
+    return vermelho
 
-    cv2.imshow('Vermelho', np.hstack([imagem, outputVermelho]))
 
 # LARANJA
 def laranja(total):
@@ -45,8 +44,7 @@ def laranja(total):
                 preto = preto + 1
 
     laranja = total - preto
-    print('Laranja: ', laranja)
-    cv2.imshow('Laranja', np.hstack([imagem, outputLaranja]))
+    return laranja
 
 #AMARELO
 def amarelo(total):
