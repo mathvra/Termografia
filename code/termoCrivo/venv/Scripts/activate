@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\matheus\Desktop\termoCrivo\venv"
+VIRTUAL_ENV="C:\Users\matheusvra\Desktop\termocrivo\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

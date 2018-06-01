@@ -1,0 +1,12 @@
+{% extends 'base_layout.html' %}
+{% load static from staticfiles %}
+
+
+{% block content %}
+	<div class="container-fluid mt-3">
+		<h1>Nome: {{contaCor.nome}}</h1>
+		<img src="{{ contaCor.foto.url }}" width="250px">
+		<p>Texto: {{contaCor.texto}}</p>
+		<p>Data: {{contaCor.data}}</p>
+	</div>
+{% endblock %}

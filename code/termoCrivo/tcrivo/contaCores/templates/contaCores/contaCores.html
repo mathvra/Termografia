@@ -1,0 +1,13 @@
+{% extends 'base_layout.html' %}
+{% load static from staticfiles %}
+
+{% block content %}
+    irineu
+    {% for contaCor in contaCores %}
+        <div class="cores">
+            <h1><a href="{% url 'contaCores:detalhes' nome=contaCor.nome %}">{{contaCor.nome}}</a></h1>
+            <p>{{contaCor.texto}}</p>
+            <p>{{contaCor.data}}</p>
+        </div>
+	{% endfor %}
+{% endblock %}
