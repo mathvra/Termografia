@@ -23,9 +23,17 @@
 				<a class="col-8 mx-auto navbar-brand" href="javascript:history.back()">
 					<img src="{% static 'imgs/termocrivologo.png' %}" width="125px" class="d-inline-block align-top" alt="">
 				</a>
-				<!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> -->
-					<!-- <span class="navbar-toggler-icon"></span> -->
-				<!-- </button> -->
+				<div class="col-4 " id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item mx-auto active">
+							
+							<form action="{% url 'contas:logout' %}" method="post">
+								{% csrf_token %}
+								<input type="submit" class="btn btn-outline-success" value="Sair">
+							</form>
+						</li>
+					</ul>
+				</div>
 				
 			</div>
 		</div>
