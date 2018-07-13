@@ -7,8 +7,8 @@
         {% csrf_token %}
         {{formulario}}
         {% if request.GET.next %}
-            <input type="hidden" name="next" value="{{ request.GET.next}}">
+            <input class="btn btn-outline-success" type="hidden" name="next" value="{{ request.GET.next}}">
         {% endif %}
-        <input type="submit" value="Entrar">
+        <input class="btn btn-outline-success" type="submit" value="Entrar">
     </form>
 {% endblock %}

@@ -20,11 +20,12 @@
 	<div class="container-fluid bg-light">
 		<div class="container">
 			<div class="row navbar navbar-expand-lg navbar-light bg-light">
-				<a class="col-8 mx-auto navbar-brand" href="javascript:history.back()">
+				<a class="col-8 mx-auto navbar-brand" href="{% url 'index' %}">
 					<img src="{% static 'imgs/termocrivologo.png' %}" width="125px" class="d-inline-block align-top" alt="">
 				</a>
 				<div class="col-4 " id="navbarNav">
 					<ul class="navbar-nav">
+						{% if user.is_authenticated %}
 						<li class="nav-item mx-auto active">
 							
 							<form action="{% url 'contas:logout' %}" method="post">
@@ -32,6 +33,17 @@
 								<input type="submit" class="btn btn-outline-success" value="Sair">
 							</form>
 						</li>
+						<li>
+							<a class="btn btn-outline-success" href="{%url 'contaCores:criar' %}">Novo Arquivo</a>
+						</li>
+						{%else %}
+							<li>
+								<a class="btn btn-outline-success mr-3" href="{% url 'contas:login' %}">Entrar</a>
+							</li>
+							<li>
+								<a class="btn btn-outline-success" href="{% url 'contas:cadastro' %}">Cadastre-se</a>
+							</li>
+						{% endif%}
 					</ul>
 				</div>
 				

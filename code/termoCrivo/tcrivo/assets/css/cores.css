@@ -8,6 +8,8 @@
 .magenta{background-color: magenta!important;}
 .preto{background-color: black !important;}
 
+
+
 .gradienteGeral{
     background: linear-gradient(to right, red , orange, yellow, greenyellow, cyan, blue, blueviolet, magenta);
 }

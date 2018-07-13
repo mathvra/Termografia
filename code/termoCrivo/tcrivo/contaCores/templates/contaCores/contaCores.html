@@ -4,9 +4,10 @@
 {% block content %}
     {% for contaCor in contaCores %}
         <div class="cores">
-            <h1><a href="{% url 'contaCores:detalhes' nome=contaCor.nome %}">{{contaCor.nome}}</a></h1>
+            <h1><a href="{% url 'contaCores:detalhes' slug=contaCor.slug %}">{{contaCor.slug}}</a></h1>
             <p>{{contaCor.texto}}</p>
             <p>{{contaCor.data}}</p>
+            <p>Criado por {{contaCor.autor.username}}</p>
         </div>
         
         <div class="line gradienteCold"></div>
