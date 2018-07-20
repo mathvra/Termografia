@@ -1,11 +1,11 @@
 import cv2
 import numpy as np
-from models import ContaCores
+from . import models
 
 class Tratamento:
     def __init__(self, foto):
-        self.foto = ContaCores.foto
-        self.total = self.foto.shape[1] * self.foto[0]
+        self.foto = models.ContaCores.foto
+        self.total = self.foto.shape[1] * self.foto.shape[0]
         self.imagemHSV = cv2.cvtColor(self.foto, cv2.COLOR_BGR2HSV)
 
     #VERMELHO
