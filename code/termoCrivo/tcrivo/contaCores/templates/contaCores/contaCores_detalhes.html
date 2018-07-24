@@ -9,4 +9,8 @@
 		<p>Texto: {{contaCor.texto}}</p>
 		<p>Data: {{contaCor.data}}</p>
 	</div>
+	<form class="site-form" action="{% url 'contaCores:analise' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input class="btn btn-outline-success" type="submit" value="Analizar">
+    </form>
 {% endblock %}

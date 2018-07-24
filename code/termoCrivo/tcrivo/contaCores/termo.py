@@ -4,7 +4,7 @@ from . import models
 
 class Tratamento:
     def __init__(self, foto):
-        self.foto = models.ContaCores.foto
+        self.foto = foto
         self.total = self.foto.shape[1] * self.foto.shape[0]
         self.imagemHSV = cv2.cvtColor(self.foto, cv2.COLOR_BGR2HSV)
 
@@ -30,7 +30,7 @@ class Tratamento:
         vermelho = self.total - preto
         print('Vermelho: ', vermelho)
 
-        cv2.imshow('Vermelho', np.hstack([self.foto, outputVermelho]))
+        return vermelho
 
     # LARANJA
     def laranja(self):
@@ -49,7 +49,7 @@ class Tratamento:
 
         laranja = self.total - preto
         print('Laranja: ', laranja)
-        cv2.imshow('Laranja', np.hstack([self.foto, outputLaranja]))
+        return laranja
 
     #AMARELO
     def amarelo(self):
@@ -68,7 +68,7 @@ class Tratamento:
 
         amarelo = self.total - preto
         print('Amarelo: ', amarelo)
-        cv2.imshow("Amarelo", np.hstack([self.foto, outputAmarelo]))
+        return amarelo
 
     #VERDE
     def verde(self):
@@ -87,7 +87,7 @@ class Tratamento:
 
         verde = self.total - preto
         print('Verde ', verde)
-        cv2.imshow("Verde", np.hstack([self.foto, outputVerde]))
+        return verde
 
     #CIANO
     def ciano(self):
@@ -106,7 +106,7 @@ class Tratamento:
 
         ciano = self.total - preto
         print('Ciano: ', ciano)
-        cv2.imshow("Ciano", np.hstack([self.foto, outputCiano]))
+        return ciano
 
     #AZUL
     def azul(self):
@@ -125,7 +125,7 @@ class Tratamento:
 
         azul = self.total - preto
         print('Azul ', azul)
-        cv2.imshow("Azul", np.hstack([self.foto, outputAzul]))
+        return azul
 
     #VIOLETA
     def violeta(self):
@@ -144,7 +144,7 @@ class Tratamento:
 
         violeta = self.total - preto
         print('Violeta: ', violeta)
-        cv2.imshow('Violeta', np.hstack([self.foto, outputVioleta]))
+        return violeta
 
     #MAGENTA
     def magenta(self):
@@ -163,7 +163,7 @@ class Tratamento:
 
         magenta = self.total - preto
         print('Magenta: ', magenta)
-        cv2.imshow('Magenta', np.hstack([self.foto, outputMagenta]))
+        return magenta
 
     #BRANCO
     def branco(self):
@@ -182,7 +182,7 @@ class Tratamento:
 
         branco = self.total - preto
         print('Branco: ', branco)
-        cv2.imshow("Branco", np.hstack([self.foto, outputBranco]))
+        return branco
 
 
 

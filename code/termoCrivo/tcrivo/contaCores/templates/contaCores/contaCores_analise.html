@@ -1,0 +1,14 @@
+{% extends "base_layout.html" %}
+{% load static from staticfiles %}
+
+
+
+{% block content %}
+    <h1>Análise de {{contaCor.Nome}}</h1>
+    <form class="site-form" action="{% url 'contaCores:criar' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{foto}}
+        {{form}}
+        <input class="btn btn-outline-success" type="submit" value="criar">
+    </form>
+{% endblock %}
