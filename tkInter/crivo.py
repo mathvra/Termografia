@@ -29,10 +29,10 @@ class Crivo():
                 if (v==0):
                     preto = preto + 1
 
-        vermelho = ((total - preto)/total)*100
-        print('Vermelho: ', vermelho)
-        cv2.imshow('Vermelho', np.hstack([self.foto, outputVermelho]))
-
+        vermelhoQtd = ((total - preto)/total)*100
+        print('Vermelho: ', vermelhoQtd)
+        # cv2.imshow('Vermelho', np.hstack([self.foto, outputVermelho]))
+        vermelho = [vermelhoQtd, outputVermelho]
         return vermelho
 
     # LARANJA
@@ -52,9 +52,10 @@ class Crivo():
                 if (v == 0):
                     preto = preto + 1
 
-        laranja = ((total - preto)/total)*100
-        print('Laranja: ', laranja)
-        cv2.imshow('Laranja', np.hstack([self.foto, outputLaranja]))
+        laranjaQtd = ((total - preto)/total)*100
+        print('Laranja: ', laranjaQtd)
+        # cv2.imshow('Laranja', np.hstack([self.foto, outputLaranja]))
+        laranja = [laranjaQtd, outputLaranja]
         return laranja
 
     #AMARELO
@@ -74,9 +75,10 @@ class Crivo():
                 if (v==0):
                     preto = preto + 1
 
-        amarelo = ((total - preto)/total)*100
-        print('Amarelo: ', amarelo)
-        cv2.imshow("Amarelo", np.hstack([self.foto, outputAmarelo]))
+        amareloQtd = ((total - preto)/total)*100
+        print('Amarelo: ', amareloQtd)
+        # cv2.imshow("Amarelo", np.hstack([self.foto, outputAmarelo]))
+        amarelo = [amareloQtd, outputAmarelo]
         return amarelo
 
     #VERDE
@@ -96,9 +98,10 @@ class Crivo():
                 if (v==0):
                     preto = preto + 1
 
-        verde = ((total - preto)/total)*100
-        print('Verde ', verde)
-        cv2.imshow("Verde", np.hstack([self.foto, outputVerde]))
+        verdeQtd = ((total - preto)/total)*100
+        print('Verde ', verdeQtd)
+        # cv2.imshow("Verde", np.hstack([self.foto, outputVerde]))
+        verde = [verdeQtd, outputVerde]
         return verde
 
     #CIANO
@@ -118,9 +121,10 @@ class Crivo():
                 if (v==0):
                     preto = preto + 1
 
-        ciano = ((total - preto)/total)*100
-        print('Ciano: ', ciano)
-        cv2.imshow("Ciano", np.hstack([self.foto, outputCiano]))
+        cianoQtd = ((total - preto)/total)*100
+        print('Ciano: ', cianoQtd)
+        # cv2.imshow("Ciano", np.hstack([self.foto, outputCiano]))
+        ciano = [cianoQtd, outputCiano]
         return ciano
 
     #AZUL
@@ -140,9 +144,10 @@ class Crivo():
                 if (v==0):
                     preto = preto + 1
 
-        azul = ((total - preto)/total)*100
-        print('Azul ', azul)
-        cv2.imshow("Azul", np.hstack([self.foto, outputAzul]))
+        azulQtd = ((total - preto)/total)*100
+        print('Azul ', azulQtd)
+        # cv2.imshow("Azul", np.hstack([self.foto, outputAzul]))
+        azul = [azulQtd, outputAzul]
         return azul
 
     #VIOLETA
@@ -162,9 +167,10 @@ class Crivo():
                 if (v==0):
                     preto = preto + 1
 
-        violeta = ((total - preto)/total)*100
-        print('Violeta: ', violeta)
-        cv2.imshow('Violeta', np.hstack([self.foto, outputVioleta]))
+        violetaQtd = ((total - preto)/total)*100
+        print('Violeta: ', violetaQtd)
+        # cv2.imshow('Violeta', np.hstack([self.foto, outputVioleta]))
+        violeta = [violetaQtd, outputVioleta]
         return violeta
 
     #MAGENTA
@@ -184,9 +190,10 @@ class Crivo():
                 if (v==0):
                     preto = preto + 1
 
-        magenta = ((total - preto)/total)*100
-        print('Magenta: ', magenta)
-        cv2.imshow('Magenta', np.hstack([self.foto, outputMagenta]))
+        magentaQtd = ((total - preto)/total)*100
+        print('Magenta: ', magentaQtd)
+        # cv2.imshow('Magenta', np.hstack([self.foto, outputMagenta]))
+        magenta = [magentaQtd, outputMagenta]
         return magenta
 
     #BRANCO
@@ -206,7 +213,8 @@ class Crivo():
                 if (v==0):
                     preto = preto + 1
 
-        branco = ((total - preto)/total)*100
-        print('Branco: ', branco)
+        brancoQtd = ((total - preto)/total)*100
+        print('Branco: ', brancoQtd)
         cv2.imshow("Branco", np.hstack([self.foto, outputBranco]))
+        branco = [brancoQtd, outputBranco]
         return branco
