@@ -31,6 +31,7 @@ class Crivo():
 
         vermelho = ((total - preto)/total)*100
         print('Vermelho: ', vermelho)
+        cv2.imshow('Vermelho', np.hstack([self.foto, outputVermelho]))
 
         return vermelho
 
@@ -53,17 +54,18 @@ class Crivo():
 
         laranja = ((total - preto)/total)*100
         print('Laranja: ', laranja)
+        cv2.imshow('Laranja', np.hstack([self.foto, outputLaranja]))
         return laranja
 
     #AMARELO
     def amarelo(self):
         total = self.foto.shape[1] * self.foto.shape[0]
-        imagemHSV = cv2.cvtColor( self.foto, cv2.COLOR_BGR2HSV)
+        imagemHSV = cv2.cvtColor(self.foto, cv2.COLOR_BGR2HSV)
         lowAmarelo = np.array([26,128,51])
         upAmarelo = np.array([30,255,255])
 
         maskAmarelo =  cv2.inRange(imagemHSV, lowAmarelo, upAmarelo)
-        outputAmarelo= cv2.bitwise_and( self.foto, imagemHSV, mask = maskAmarelo)
+        outputAmarelo= cv2.bitwise_and(self.foto, imagemHSV, mask = maskAmarelo)
 
         preto = 0
         for y in range(0, outputAmarelo.shape[0], 1):
@@ -74,17 +76,18 @@ class Crivo():
 
         amarelo = ((total - preto)/total)*100
         print('Amarelo: ', amarelo)
+        cv2.imshow("Amarelo", np.hstack([self.foto, outputAmarelo]))
         return amarelo
 
     #VERDE
     def verde(self):
         total =  self.foto.shape[1] *  self.foto.shape[0]
-        imagemHSV = cv2.cvtColor( self.foto, cv2.COLOR_BGR2HSV)
+        imagemHSV = cv2.cvtColor(self.foto, cv2.COLOR_BGR2HSV)
         lowVerde = np.array([31,128,51])
         upVerde = np.array([83,255,255])
 
         maskVerde =  cv2.inRange(imagemHSV, lowVerde, upVerde)
-        outputVerde= cv2.bitwise_and( self.foto, imagemHSV, mask = maskVerde)
+        outputVerde= cv2.bitwise_and(self.foto, imagemHSV, mask = maskVerde)
 
         preto = 0
         for y in range(0, outputVerde.shape[0], 1):
@@ -95,6 +98,7 @@ class Crivo():
 
         verde = ((total - preto)/total)*100
         print('Verde ', verde)
+        cv2.imshow("Verde", np.hstack([self.foto, outputVerde]))
         return verde
 
     #CIANO
@@ -116,6 +120,7 @@ class Crivo():
 
         ciano = ((total - preto)/total)*100
         print('Ciano: ', ciano)
+        cv2.imshow("Ciano", np.hstack([self.foto, outputCiano]))
         return ciano
 
     #AZUL
@@ -137,6 +142,7 @@ class Crivo():
 
         azul = ((total - preto)/total)*100
         print('Azul ', azul)
+        cv2.imshow("Azul", np.hstack([self.foto, outputAzul]))
         return azul
 
     #VIOLETA
@@ -158,6 +164,7 @@ class Crivo():
 
         violeta = ((total - preto)/total)*100
         print('Violeta: ', violeta)
+        cv2.imshow('Violeta', np.hstack([self.foto, outputVioleta]))
         return violeta
 
     #MAGENTA
@@ -179,6 +186,7 @@ class Crivo():
 
         magenta = ((total - preto)/total)*100
         print('Magenta: ', magenta)
+        cv2.imshow('Magenta', np.hstack([self.foto, outputMagenta]))
         return magenta
 
     #BRANCO
@@ -200,4 +208,5 @@ class Crivo():
 
         branco = ((total - preto)/total)*100
         print('Branco: ', branco)
+        cv2.imshow("Branco", np.hstack([self.foto, outputBranco]))
         return branco
