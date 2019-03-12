@@ -5,9 +5,9 @@
 
 ## Como funciona? É bem simples.
 
-- Crie o arquivo
+- Abra o TermoCrivo
 - Adicione as imagens
-- Baixe o relatório
+- Veja o Resultado
 
 # Padrão de leitura de cor:
 
@@ -18,7 +18,6 @@
 ### V: Value (Valor)
 
 # Tecnologias Utilizadas:
-### Python-Django
+### Python
 ### OpenCV
-### HTML5
-### Bootstrap 4
+### TKinter

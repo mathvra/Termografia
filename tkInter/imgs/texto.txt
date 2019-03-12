@@ -1,9 +1,0 @@
-Vermelho: 8.80%
-Laranja: 4.73%
-Amarelo: 8.41%
-Verde: 0.79%
-Ciano: 1.04%
-Azul: 0.41%
-Violeta: 8.80%
-Magenta: 4.73%
-Branco: 16.78%

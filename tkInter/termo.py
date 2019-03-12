@@ -78,12 +78,12 @@ janela["bg"] = "#333"
 janela.geometry('1280x720+200+50')
 canvas = Canvas(janela)
 canvas.pack()
-img = ImageTk.PhotoImage(Image.open("imgs/termocrivologo2.png"))
+img = ImageTk.PhotoImage(Image.open("logo.png"))
 canvas.create_image(35, 5, anchor=NW, image=img)
 canvas.place(width='2000', height=50)
-janela.iconbitmap(bitmap='2738favicon2.ico')
+janela.iconbitmap(bitmap='icon.ico')
 
-imgicon = PhotoImage(file='2738favicon2.ico')
+imgicon = PhotoImage(file='icon.ico')
 janela.tk.call('wm', 'iconphoto', janela._w, imgicon)  
 
 panelA = None
